@@ -1,0 +1,93 @@
+h2{
+    text-align: center;
+    margin-top: 24px;
+}
+  
+form{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    min-width: 30%;
+    position: relative;
+}
+
+.inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    border-radius: 30px;
+    width: 100%;
+    color: #ffffff;
+}
+
+.inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #ffffff;
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #191622;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+    border-color: #a6a6fa;
+}
+
+form button{
+    margin-top: 40px;
+    padding: 16px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffffd2;
+    transition: 0.3s;
+}
+
+form button:hover{
+    background-color: white;
+    color: black;
+}
+
+.checkbox{
+    font-size: 14pt;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#checkbox1{
+    width: 24px;
+    height: 24px;
+}
+
+#checkbox:checked{
+    background-color: #a6a6fa;
+    color: #a6a6fa;
+}
+
+.finalDocument{
+    width: 90%;
+    text-align: justify;
+    margin: 0 auto;
+    color: black;
+    font-size: 20px;
+    margin-top: 40px;
+}

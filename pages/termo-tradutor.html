@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "jylwb43z7i");
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../assets/favicon.svg" type="image/x-icon">
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/termo-tradutor.css">
+        <title>Document Express</title>
+    </head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        $("#idcpf").mask("000.000.000-00");
+        $("#cep").mask("00000-000");
+    </script>
+
+    <body>
+        <h2>
+            Termo de Compromisso de Tradutor para Registro de Nascimento
+        </h2>
+
+        <form action="" method="get" id="formulario">
+            <div class="inputGroup">
+                <input type="text" required="" id="idtradutor" autocomplete="off">
+                <label for="trad">Nome do Tradutor</label>
+            </div>
+
+            <div class="inputGroup">
+                <input type="text" required="" id="idestCivil" autocomplete="off">
+                <label for="estadoCivil">Estado Civil</label>
+            </div>
+
+            <div class="inputGroup">
+                <input type="text" required="" id="idnacionalidade" autocomplete="off">
+                <label for="nacionalidade">Nacionalidade</label>
+            </div>
+
+            <div class="inputGroup">
+                <input type="text" required="" id="idprofissao" autocomplete="off">
+                <label for="profissao">Profissão</label>
+            </div>
+    
+            <div class="inputGroup">
+                <input type="text" required="" id="idrg" autocomplete="off" value="RG:">
+                <label for="rg">RG</label>
+            </div>
+    
+            <div class="inputGroup">
+                <input type="text" required="" id="idcpf" autocomplete="off">
+                <label for="cpf">CPF</label>
+            </div>
+
+            <div class="inputGroup">
+                <input type="text" required="" id="idlingua" autocomplete="off">
+                <label for="lingua">Língua</label>
+            </div>
+
+            <div class="inputGroup">
+                <input name="cep" type="text" id="cep" onblur="pesquisacep(this.value)" />
+                <label for="cep">CEP</label>
+            </div>
+
+            <div class="inputGroup">
+                <input name="rua" type="text" id="rua" />
+                <label for="rua">Rua</label>
+            </div>
+
+            <div class="inputGroup">
+                <input type="text" id="idnumero" />
+                <label for="numero">Número</label>
+            </div>
+
+            <div class="inputGroup">
+                <input type="text" id="idcomplemento" />
+                <label for="complemento">Complemento</label>
+            </div>
+
+            <div class="inputGroup">
+                <input name="bairro" type="text" id="bairro" />
+                <label for="bairro">Bairro</label>
+            </div>
+
+            <div class="inputGroup">
+                <input name="cidade" type="text" id="cidade" />
+                <label for="cidade">Cidade</label>
+            </div>
+
+            <div class="inputGroup">
+                <input name="uf" type="text" id="uf" autocomplete="off"/>
+                <label for="estado">Estado</label>
+            </div>
+    
+            <div class="inputGroup">
+                <input type="text" required="" id="idgenitor" autocomplete="off">
+                <label for="falecido">Genitor(a)</label>
+            </div>
+    
+            <button onclick="gerarTermo()" type="button">Gerar termo</button>
+        </form>
+    
+        <div class="finalDocument" id="print-preview" style="display: none;">
+            Eu, <strong><span id="preview-nome"></span></strong>, <strong><span id="preview-estCivil"></span></strong>,
+            <strong><span id="preview-nacionalidade"></span></strong>, <strong><span id="preview-profissao"></span></strong>, 
+            portador(a) do(a) <strong><span id="preview-rg"></span></strong>, <strong>CPF: <span id="preview-cpf"></span></strong>,
+            na qualidade de tradutor da língua <strong><span id="preview-lingua"></span></strong>, residente e domiciliado(a) na 
+            <strong><span id="preview-rua"></span></strong>, <strong>Nº <span id="preview-numero"></span></strong>, <strong><span id="preview-complemento"></span></strong>,
+            <strong><span id="preview-bairro"></span></strong>, <strong><span id="preview-cidade"></span>/</strong><strong><span id="preview-uf"></span></strong>, 
+            <strong>CEP: <span id="preview-cep"></span></strong>, afirmo ser conhecedor(a) do idioma e firmo o compromisso de 
+            traduzir o idioma para o português para a finalidade de realizar o registro de nascimento ref. Livro A- _______, fls. _________, Termo _________________ 
+            em nome de <strong><span id="preview-genitor"></span></strong>, me responsabilizo sob as penas da lei pela veracidade das informações prestadas, 
+            ciente da responsabilidade civil e criminal na falsidade de informações, com fundamentos no art. 215 parágrafo §64 
+            do Código Civil Brasileiro.
+            <br>
+            <br>
+            <br>
+            <span id="preview-date"></span>
+            <br>
+            <br>
+            ________________________________________
+            <br>
+            <span id="preview-sign"></span>
+        </div>
+
+    <script src="../scripts/termo-tradutor.js"></script>
+    </body>
+</html>

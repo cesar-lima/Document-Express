@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "jylwb43z7i");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/uniao-estavel.css">
+    <title>Document Express</title>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript">
+    $("#idcpf").mask("000.000.000-00");
+    $("#cep").mask("00000-000");
+</script>
+
+<body>
+    <h2>
+        Declaração de União Estável em Assento de Óbito
+    </h2>
+
+    <form action="" method="get" id="formulario">
+        <div class="inputGroup">
+            <input type="text" required="" id="iddeclarante" autocomplete="off">
+            <label for="name">Declarante</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idnacionalidade" autocomplete="off">
+            <label for="name">Nacionalidade</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idprofissao" autocomplete="off">
+            <label for="name">Profissão</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idrg" value="RG: " autocomplete="off">
+            <label for="rg">RG</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idcpf" autocomplete="off">
+            <label for="cpf">CPF</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="cep" type="text" id="cep" onblur="pesquisacep(this.value)" />
+            <label for="declaracao">CEP</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="rua" type="text" id="rua" />
+            <label for="declaracao">Rua</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" id="idnumero" />
+            <label for="declaracao">Número</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="bairro" type="text" id="bairro" />
+            <label for="declaracao">Bairro</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="cidade" type="text" id="cidade" />
+            <label for="declaracao">Cidade</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="uf" type="text" id="uf" autocomplete="off" />
+            <label for="declaracao">Estado</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idfalecido" autocomplete="off">
+            <label for="falecido">Nome do falecido(a)</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idcompanheiro" autocomplete="off">
+            <label for="declaracao">Companheiro(a)</label>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="checkbox1">
+            <label>O(a) declararante é uma das partes da união estável?</label>
+        </div>
+
+        <button onclick="gerarTermo()" type="button">Gerar termo</button>
+    </form>
+
+    <div class="finalDocument" id="print-preview" style="display: none;">
+        <strong><span id="preview-nome"></span></strong>, de nacionalidade <strong><span
+                id="preview-nacionalidade"></span></strong>, <strong><span id="preview-profissao"></span></strong>,
+        portador(a) da cédula de identidade <strong><span id="preview-rg"></span></strong>
+        e do CPF: <strong><span id="preview-cpf"></span></strong>, residente e domiciliado(a) no endereço: <strong><span
+                id="preview-rua"></span>,
+            Nº <strong><span id="preview-numero"></span></strong>, bairro: <strong><span
+                    id="preview-bairro"></span></strong>,
+            <strong><span id="preview-cidade"></span></strong> - <strong><span id="preview-uf"></span></strong>,
+        </strong> declara que <strong><span id="preview-falecido"></span></strong>
+        e <strong><span id="preview-companheiro"></span></strong> conviviam em <b>União Estável</b>
+        nos termos da lei n° 10.406, artigo. 1.723 do Código Civil. Declara ainda que foi cientificado de que apesar de
+        não ser obrigatória a apresentação de nenhum documento comprovatório da união estável e ser possível constar sua
+        informação por simples declaração das partes no registro de óbito, conforme entendimento da CGJSP, consolidado
+        nas alterações do item 94, “d” e “e”, do Capítulo XVII, Seção VII, Subseção I, do Tomo II, das Normas de Serviço
+        da Corregedoria Geral da Justiça, está ciente e assume a responsabilidade civil e criminal pela veracidade das
+        informações prestadas para o registro de óbito e eventual prejuízo que pode causar a terceiros interessados, sob
+        as penas da lei.
+        <br>
+        <br>
+        Ciente também que a falsidade de qualquer informação ou declaração fornecida é crime de falsidade ideológica,
+        com fundamento no art. 299 do Código Penal.
+        <br>
+        <br>
+        <span id="preview-date"></span>
+        <br><br>
+        ________________________________________
+        <br>
+        <span id="preview-sign"></span>
+    </div>
+
+    <div class="finalDocument" id="print-preview2" style="display: none;">
+        <strong><span id="preview-nome2"></span></strong>, de nacionalidade <strong><span
+                id="preview-nacionalidade2"></span></strong>, <strong><span id="preview-profissao2"></span></strong>,
+        portador(a) da cédula de identidade <strong><span id="preview-rg2"></span></strong>
+        e do CPF: <strong><span id="preview-cpf2"></span></strong>, residente e domiciliado(a) no endereço:
+        <strong><span id="preview-rua2"></span>,
+            Nº <strong><span id="preview-numero2"></span></strong>, bairro: <strong><span
+                    id="preview-bairro2"></span></strong>,
+            <strong><span id="preview-cidade2"></span></strong> - <strong><span id="preview-uf2"></span></strong>,
+        </strong> declara que convivia em <b>União Estável</b> com <strong><span id="preview-falecido2"></span></strong>
+        nos termos da lei n° 10.406, artigo. 1.723 do Código Civil. Declara ainda que foi cientificado de que apesar de
+        não ser obrigatória a apresentação de nenhum documento comprovatório da união estável e ser possível constar sua
+        informação por simples declaração das partes no registro de óbito, conforme entendimento da CGJSP, consolidado
+        nas alterações do item 94, “d” e “e”, do Capítulo XVII, Seção VII, Subseção I, do Tomo II, das Normas de Serviço
+        da Corregedoria Geral da Justiça, está ciente e assume a responsabilidade civil e criminal pela veracidade das
+        informações prestadas para o registro de óbito e eventual prejuízo que pode causar a terceiros interessados, sob
+        as penas da lei.
+        <br>
+        <br>
+        Ciente também que a falsidade de qualquer informação ou declaração fornecida é crime de falsidade ideológica,
+        com fundamento no art. 299 do Código Penal.
+        <br>
+        <br>
+        <span id="preview-date2"></span>
+        <br><br>
+        ________________________________________
+        <br>
+        <span id="preview-sign2"></span>
+    </div>
+    <script src="../scripts/uniao-estavel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "jylwb43z7i");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/retificacao110.css">
+    <title>Document Express</title>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript">
+    $("#idcpf").mask("000.000.000-00");
+    $("#cep").mask("00000-000");
+    $("#idcelular").mask("(00) 00000-0000")
+    $('#idmatricula').mask("000000 00 00 0000 0 00000 000 0000000-00")
+</script>
+
+<body>
+    <h2>
+        Requerimento de Retificação - Assentamento de Registro<br>
+        Art. 110, inciso <span style="font-family: serif;">I</span> Lei Federal Nº 6015/73
+    </h2>
+
+    <form action="" method="get" id="formulario">
+        <h4>
+            Dados do Atendimento
+        </h4>
+
+        <div class="inputGroup">
+            <input name="atendente" type="text" required="" id="idatendente" autocomplete />
+            <label for="atendente">Atendente</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="escrevente" type="text" required="" id="idescrevente" autocomplete />
+            <label for="escrevente">Escrevente Responsável</label>
+        </div>
+
+        <div class="space"></div>
+
+        <h4>
+            Qualificação
+        </h4>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idnome" autocomplete="off">
+            <label for="name">Nome</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idnaturalidade" autocomplete="off">
+            <label for="naturalidade">Naturalidade</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idestcivil" autocomplete="off">
+            <label for="naturalidade">Est. Civil</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idprofissao" autocomplete="off">
+            <label for="profissao">Profissão</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idrg" autocomplete="off" value="RG: ">
+            <label for="rg">RG</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idcpf" autocomplete="off">
+            <label for="cpf">CPF</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" id="idcelular" required="" autocomplete="off" />
+            <label for="cel">Celular</label>
+        </div>      
+        
+        <div class="inputGroup">
+            <input type="text" id="idemail" required="" autocomplete="off" />
+            <label for="email">Email</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="cep" type="text" id="cep" onblur="pesquisacep(this.value)" required=""autocomplete="off" />
+            <label for="cep">CEP</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="rua" type="text" id="rua" required=""/>
+            <label for="rua">Rua</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" id="idnumero" required=""/>
+            <label for="numero">Número</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" id="idcomplemento" required=""/>
+            <label for="complemento">Complemento</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="bairro" type="text" id="bairro" required=""/>
+            <label for="bairro">Bairro</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="cidade" type="text" id="cidade" required=""/>
+            <label for="cidade">Cidade</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="uf" type="text" id="uf" autocomplete="off" required=""/>
+            <label for="uf">Estado</label>
+        </div>
+
+        <div class="space"></div>
+
+        <h4>
+            Dados do Registro
+        </h4>
+
+        <div class="inputGroup">
+            <input name="tiporegistro" type="text" required="" id="idtiporegistro" autocomplete />
+            <label for="tiporegistro">Nasc/Casam/Óbito</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="livro" type="text" required="" id="idlivroregistro" autocomplete="off" />
+            <label for="livroregistro">Livro</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="folha" type="text" required="" id="idfolharegistro" autocomplete="off" />
+            <label for="folharegistro">Folha</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="termo" type="text" required="" id="idtermoregistro" autocomplete="off" />
+            <label for="termoregistro">Termo</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="matricula" type="text" required="" id="idmatricula" autocomplete="off" />
+            <label for="matricula">Matrícula</label>
+        </div>
+
+        <div class="space"></div>
+
+        <h4>
+            Objeto da Retificação
+        </h4>
+
+        <div class="inputGroup">
+            <textarea name="infoerrada" required="" id="idinfoerrada" cols="50" rows="10"></textarea>
+            <!-- <input name="uf" type="text" required="" id="iadinfoerrada" autocomplete="off" /> -->
+            <label for="infoerrada">Informação Errada</label>
+        </div>
+
+        <div class="inputGroup">
+            <textarea name="infocorreta" required="" id="idinfocorreta" cols="50" rows="10"></textarea>
+            <!-- <input name="uf" type="text" required="" id="iadinfoerrada" autocomplete="off" /> -->
+            <label for="infoerrada">Informação Correta</label>
+        </div>
+
+        <div class="space"></div>
+
+        <h4>
+            Documentos Apresentados
+        </h4>
+
+        <div class="inputGroup">
+            <textarea name="docsapresentados" required="" id="iddocsapresentados" cols="50" rows="10"></textarea>
+            <!-- <input name="uf" type="text" required="" id="iadinfoerrada" autocomplete="off" /> -->
+            <!-- <label for="docsapresentados">Documentos Apresentados</label> -->
+        </div>
+
+        <button onclick="gerarTermo()" type="button">Gerar termo</button>
+    </form>
+
+    <div class="finalDocument" id="print-preview" style="display: none;">
+        <strong>ILUSTRÍSSIMA SENHORA DOUTORA OFICIAL DE REGISTRO CIVIL DAS PESSOAS NATURAIS DO VIGÉSIMO PRIMEIRO
+        SUBDISTRITO DA SAÚDE, COMARCA DA CAPITAL DO ESTADO DE SÃO PAULO:</strong><BR/>
+        Diante da constatação de erro em assentamento de registro civil, requeiro se digne Vossa Senhoria, na forma da lei,
+        determinar a retificação a baixo:
+        <br>
+        <br>
+        <strong>Dados do(a) Requerente:</strong><br>
+        <strong><span id="preview-nome"></span></strong>, natural de <strong><span id="preview-naturalidade"></span></strong>,
+        <strong><span id="preview-estCivil"></span></strong>, <strong><span id="preview-profissao"></span></strong>, portador(a) da carteira de identidade
+         <strong>nº<span id="preview-rg"></span>SSP/SP</strong> e inscrito(a) no CPF <strong>nº<span id="preview-cpf"></span></strong>, 
+        com endereço à <strong><span id="preview-rua"></span></strong>, Nº <strong><span id="preview-numero"></span></strong> <strong><span id="preview-complemento"></span></strong>, 
+        <strong>CEP:<span id="preview-cep"></span></strong>, bairro: <strong><span id="preview-bairro"></span></strong>, <strong><span id="preview-cidade"></span></strong> - <strong><span id="preview-uf"></span></strong>, 
+        celular: <strong><span id="preview-celular"></span></strong> e email: <strong><span id="preview-email"></span></strong>.
+        <br>
+        <br>
+        <strong>Dados do Assentamento:</strong><br>
+        <strong><span id="preview-tiporegistro"></span></strong> - Livro <strong><span id="preview-livroregistro"></span></strong>, 
+        Folha <strong><span id="preview-folharegistro"></span></strong>, Termo <strong><span id="preview-termoregistro"></span></strong>,<br>
+        MATRICULA: <strong><span id="preview-matricula"></span></strong>
+        <br>
+        <br>
+        <strong>Objeto da Retificação:</strong><br>
+        <strong>Informação Conforme Assentamento(errada)</strong><br>
+        <span id="preview-infoerrada"></span>
+        <br>
+        <br>
+        <strong>Informação Correta</strong><br>
+        <span id="preview-infocorreta"></span>
+        <br>
+        <br>
+        <strong>Documentos Apresentados</strong><br>
+        <span id="preview-docsapresentados"></span>
+        <br>
+        <br>
+        pede deferimento,<br>
+        <span id="preview-date"></span>
+        <br>
+        <br>
+        ________________________________________<br>
+        Assinatura
+        <br>
+        <br>
+        ________________________________________<br>
+        Nome por Extenso
+        <br>
+        <br>
+
+
+        <footer>
+            Certifico e dou fé que as cópias reprográficas juntadas nestes autos foram conferidas com as originais e que a firma 
+            lançada no requerimento inicial foi conferida e reconhecida na minha presença. <strong><span id="preview-escrevente"></span></strong> __________________________________.
+            <strong><span id="preview-date2"></span></strong>, São Paulo-SP. Atendido por <strong><span id="preview-atendente"></span></strong>.
+        </footer>
+    </div>
+    <script src="../scripts/retificacao110.js"></script>
+</body>
+
+</html>
