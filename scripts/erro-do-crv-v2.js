@@ -1,4 +1,3 @@
-
 function gerarTermo() {
     let nome = document.getElementById("idnome").value;
     let cpf = document.getElementById("idcpf").value;

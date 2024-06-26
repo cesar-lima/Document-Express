@@ -43,5 +43,4 @@ function gerarTermo() {
     falecido = document.getElementById("preview-falecido").textContent
     declaracao = document.getElementById("preview-declaracao").textContent
     parentesco = document.getElementById("preview-parentesco").textContent
-
 }

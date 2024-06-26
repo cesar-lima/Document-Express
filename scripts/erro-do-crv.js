@@ -6,7 +6,7 @@ function limpa_formulário_cep() {
     document.getElementById('uf').value = ("");
 }
 
-function meu_callback(conteudo) {
+function cep_callback(conteudo) {
     if (!("erro" in conteudo)) {
         //Atualiza os campos com os valores.
         document.getElementById('rua').value = (conteudo.logradouro);
@@ -43,7 +43,7 @@ function pesquisacep(valor) {
             var script = document.createElement('script');
 
             //Sincroniza com o callback.
-            script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
+            script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=cep_callback';
 
             //Insere script no documento e carrega o conteúdo.
             document.body.appendChild(script);
