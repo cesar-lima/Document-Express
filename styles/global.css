@@ -22,3 +22,22 @@ body {
     background-color: #c2c1ff7b;
     border-radius: 20px;
 }
+
+.previous-icon-container{
+    padding-left: 24px;
+    padding-top: 24px;
+}
+
+.previous-icon-container a{
+    border: 1px solid #c2c1ff;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    border-radius: 50%;
+    padding: 6px 26px;
+    transition: 0.3s;
+}
+
+.previous-icon-container a:hover{
+    background-color: #c2c1ff7b;
+}
