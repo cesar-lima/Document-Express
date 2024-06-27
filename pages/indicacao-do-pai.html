@@ -1,194 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <script type="text/javascript">
-            (function (c, l, a, r, i, t, y) {
-                c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-                t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-                y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-            })(window, document, "clarity", "script", "jylwb43z7i");
-        </script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="../assets/favicon.svg" type="image/x-icon">
-        <link rel="stylesheet" href="../styles/global.css">
-        <link rel="stylesheet" href="../styles/indicacao-do-pai.css">
-        <title>Document Express</title>
-    </head>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<head>
     <script type="text/javascript">
-        $("#idcpf").mask("000.000.000-00");
-        $("#cep").mask("00000-000");
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "jylwb43z7i");
     </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/indicacao-do-pai.css">
+    <title>Document Express</title>
+</head>
 
-    <body>
-        <div class="previous-icon-container">
-            <a href="javascript:history.back()"><img src="../assets/previous-page.svg" alt="página anterior"></a>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript">
+    $("#idcpf").mask("000.000.000-00");
+    $("#cep").mask("00000-000");
+</script>
+
+<body>
+    <div class="previous-icon-container">
+        <a href="javascript:history.back()"><img src="../assets/previous-page.svg" alt="página anterior"></a>
+    </div>
+
+    <h2>
+        Declaração de Indicação de Suposto Pai
+    </h2>
+
+    <form action="" method="get" id="formulario">
+        <div class="inputGroup">
+            <input type="text" required="" id="idregistrado">
+            <label for="registrado(a)">Nome do(a) Registrado(a)</label>
         </div>
 
-        <h2>
-            Declaração de Indicação de Suposto Pai
-        </h2>
+        <h4>
+            Dados do(a) Declarante
+        </h4>
 
-        <form action="" method="get" id="formulario">
-            <div class="inputGroup">
-                <input type="text" required="" id="idnome" autocomplete="off">
-                <label for="name">Nome</label>
-            </div>
-
-            <div class="inputGroup">
-                <input type="text" required="" id="idnaturalidade" autocomplete="off">
-                <label for="naturalidade">Natural de</label>
-            </div>
-
-            <div class="inputGroup">
-                <input type="text" required="" id="ididade" autocomplete="off">
-                <label for="idade">Idade</label>
-            </div>
-
-            <div class="inputGroup">
-                <input type="text" required="" id="idprofissao" autocomplete="off">
-                <label for="profissao">Profissão</label>
-            </div>
-
-            <div class="inputGroup">
-                <input type="text" required="" id="idrg" autocomplete="off" value="RG: ">
-                <label for="rg">RG</label>
-            </div>
-
-            <div class="inputGroup">
-                <input type="text" required="" id="idcpf" autocomplete="off">
-                <label for="cpf">CPF</label>
-            </div>
-
-            <div class="inputGroup">
-                <input name="cep" type="text" required="" id="cep" onblur="pesquisacep(this.value)" />
-                <label for="cep">CEP</label>
-            </div>
-
-            <div class="inputGroup">
-                <input name="rua" required="" type="text" id="rua" />
-                <label for="rua">Rua</label>
-            </div>
-
-            <div class="inputGroup">
-                <input type="text" required="" id="idnumero" />
-                <label for="numero">Número</label>
-            </div>
-
-            <div class="inputGroup">
-                <input type="text" required="" id="idcomplemento" />
-                <label for="complemento">Complemento</label>
-            </div>
-
-            <div class="inputGroup">
-                <input name="bairro" type="text" required="" id="bairro" />
-                <label for="bairro">Bairro</label>
-            </div>
-
-            <div class="inputGroup">
-                <input name="cidade" type="text" required="" id="cidade" />
-                <label for="cidade">Cidade</label>
-            </div>
-
-            <div class="inputGroup">
-                <input name="uf" type="text" required="" id="uf" autocomplete="off" />
-                <label for="uf">Estado</label>
-            </div>
-
-            <div class="inputGroup">
-                <input type="text" required="" id="idcondicao">
-                <label for="condicao">Condição</label>
-            </div>
-
-            <div class="inputGroup">
-                <input type="text" required="" id="idregistrado" autocomplete="off">
-                <label for="nomeRegistrado">Nome do(a) registrado(a)</label>
-            </div>
-
-            <div class="inputGroup">
-                <input type="text" required="" id="idescrevente">
-                <label for="escrevente">Escrevente</label>
-            </div>
-
-
-            <button onclick="gerarTermo()" type="button">Gerar termo</button>
-        </form>
-
-        <div class="finalDocument" id="print-preview" style="display: none;">
-            Eu, <strong><span id="preview-nome"></span></strong>, natural de <strong><span
-                    id="preview-naturalidade"></span></strong>, com <strong><span id="preview-idade"></span></strong> anos
-            de idade,
-            sendo <strong><span id="preview-idadeparto"></span></strong> na ocasião do parto, <strong><span
-                    id="preview-profissao"></span></strong>, portador(a) do(a) <strong><span
-                    id="preview-rg"></span></strong>
-            e do <strong>CPF nº <span id="preview-cpf"></span></strong>, residente e domiciliado(a) no endereço:
-            <strong><span id="preview-rua"></span></strong>,
-            Nº <strong><span id="preview-numero"></span></strong> <strong><span id="preview-complemento"></span></strong>,
-            bairro: <strong><span id="preview-bairro"></span></strong>,
-            <strong><span id="preview-cidade"></span></strong> - <strong><span id="preview-uf"></span></strong>, na condição
-            de <strong><span id="preview-condicao"></span></strong> e declarante do registro de <strong><span
-                    id="preview-registrado"></span></strong>.
-            Registrado no Livro-A _______, fls. _________, Termo _________________ lavrado neste Oficial de Registro Civil
-            das Pessoas Naturais do 21° Subdistrito - Saúde, declaro para os devidos fins e em especial para fazer prova em
-            juízo ou fora dele, que fui informada pelo(a) Escrevente <span id="preview-escrevente"></span> da possibilidade
-            de indicação de Suposto Pai para o Registro de Nascimento em referência e que trata-se de um direito fundamental
-            da criança ter o pai em seu registro, entretanto, por motivos pessoais não tenho interesse em prestar a
-            indicação de dados pessoais e de localização para intimação do suposto pai no momento. Declaro ainda, por livre
-            e espontânea vontade ser minha opção fazer a indicação posteriormente. Fui informada também sobre a
-            possibilidade de indicar o Suposto Pai a qualquer momento perante o Cartório de Registro Civil, para que seja
-            feito o procedimento de Indicação de Suposto Pai para seu comparecimento e resposta perante o Juiz Corregedor
-            Permanente do Cartório, conforme previsto no Provimento 16/2012 do Conselho Nacional de Justiça.
-            <br>
-            <br>
-            Para maior clareza, e por ser expressão da verdade, firmo o presente.
-            <br>
-            <br>
-            <span id="preview-date"></span>
-            <br><br>
-            ________________________________________
-            <br>
-            <span id="preview-sign"></span>
+        <div class="inputGroup">
+            <input type="text" required="" id="idnomedeclarante" autocomplete="off">
+            <label for="name">Nome</label>
         </div>
 
-        <div class="finalDocument" id="print-preview2" style="display: none;">
-            Eu, <strong><span id="preview-nome2"></span></strong>, natural de <strong><span
-                    id="preview-naturalidade2"></span></strong>, com <strong><span id="preview-idade2"></span></strong> anos
-            de idade,
-            sendo <strong><span id="preview-idadeparto2"></span></strong> na ocasião do parto, <strong><span
-                    id="preview-profissao2"></span></strong>, portador(a) do <strong><span id="preview-rg2"></span></strong>
-            e do <strong>CPF nº <span id="preview-cpf2"></span></strong>, residente e domiciliado(a) no endereço:
-            <strong><span id="preview-rua2"></span></strong>,
-            Nº <strong><span id="preview-numero2"></span></strong>, <strong><span
-                    id="preview-complemento2"></span></strong>, bairro: <strong><span id="preview-bairro2"></span></strong>,
-            <strong><span id="preview-cidade2"></span></strong> - <strong><span id="preview-uf2"></span></strong>, na
-            condição de <strong><span id="preview-condicao2"></span></strong> e declarante do registro de <strong><span
-                    id="preview-registrado2"></span></strong>.
-            Registrado no Livro-A _______, fls. _________, Termo _________________ lavrado neste Oficial de Registro Civil
-            das Pessoas Naturais do 21° Subdistrito - Saúde, declaro para os devidos fins e em especial para fazer prova em
-            juízo ou fora dele, que fui informada pelo(a) Escrevente <span id="preview-escrevente2"></span> da possibilidade
-            de indicação de Suposto Pai para o Registro de Nascimento em referência e que trata-se de um direito fundamental
-            da criança ter o pai em seu registro, entretanto, por motivos pessoais não tenho interesse em prestar a
-            indicação de dados pessoais e de localização para intimação do suposto pai no momento. Declaro ainda, por livre
-            e espontânea vontade ser minha opção fazer a indicação posteriormente. Fui informada também sobre a
-            possibilidade de indicar o Suposto Pai a qualquer momento perante o Cartório de Registro Civil, para que seja
-            feito o procedimento de Indicação de Suposto Pai para seu comparecimento e resposta perante o Juiz Corregedor
-            Permanente do Cartório, conforme previsto no Provimento 16/2012 do Conselho Nacional de Justiça.
-            <br>
-            <br>
-            Para maior clareza, e por ser expressão da verdade, firmo o presente.
-            <br>
-            <br>
-            <span id="preview-date2"></span>
-            <br><br>
-            ________________________________________
-            <br>
-            <span id="preview-sign2"></span>
+        <div class="inputGroup">
+            <input type="text" required="" id="idrgdeclarante" autocomplete="off" value="RG: ">
+            <label for="rg">RG</label>
         </div>
-        <script src="../scripts/indicacao-do-pai.js"></script>
-    </body>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idcpfdeclarante" autocomplete="off">
+            <label for="cpf">CPF</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idprofissaodeclarante" autocomplete="off">
+            <label for="profissao">Profissão</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="cep" type="text" required="" id="cepdeclarante" onblur="pesquisacep(this.value)" />
+            <label for="cep">CEP</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="rua" required="" type="text" id="ruadeclarante" />
+            <label for="rua">Rua</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idnumerodeclarante" />
+            <label for="numero">Número</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idcomplementodeclarante" />
+            <label for="complemento">Complemento</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="bairro" type="text" required="" id="bairrodeclarante" />
+            <label for="bairro">Bairro</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="cidade" type="text" required="" id="cidadedeclarante" />
+            <label for="cidade">Cidade</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="uf" type="text" required="" id="ufdeclarante" autocomplete="off" />
+            <label for="uf">Estado</label>
+        </div>
+
+        <h4>
+            Dados do Suposto Pai
+        </h4>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idnomesupostopai" autocomplete="off">
+            <label for="name">Nome</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idrgsupostopai" autocomplete="off" value="RG: ">
+            <label for="rg">RG</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idcpfsupostopai" autocomplete="off">
+            <label for="cpf">CPF</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idprofissaosupostopai" autocomplete="off">
+            <label for="profissao">Profissão</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="cep" type="text" required="" id="cepsupostopai" onblur="pesquisacep(this.value)" />
+            <label for="cep">CEP</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="rua" required="" type="text" id="ruasupostopai" />
+            <label for="rua">Rua</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idnumerosupostopai" />
+            <label for="numero">Número</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idcomplementosupostopai" />
+            <label for="complemento">Complemento</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="bairro" type="text" required="" id="bairrosupostopai" />
+            <label for="bairro">Bairro</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="cidade" type="text" required="" id="cidadesupostopai" />
+            <label for="cidade">Cidade</label>
+        </div>
+
+        <div class="inputGroup">
+            <input name="uf" type="text" required="" id="ufsupostopai" autocomplete="off" />
+            <label for="uf">Estado</label>
+        </div>
+
+        <button onclick="gerarTermo()" type="button">Gerar termo</button>
+    </form>
+
+    <div class="finalDocument" id="print-preview" style="display: none;">
+        Eu, <strong><span id="preview-nome-declarante"></span></strong>, portadora da cédula de identidade <strong><span
+                id="preview-rg-declarante"></span></strong>,
+        inscrita no CPF sob o nº <strong><span id="preview-cpf-declarante"></span></strong>, <strong><span
+                id="preview-profissao-declarante"></span></strong>,
+        residente e domiciliada na <strong><span id="preview-rua-declarante"></span></strong>, <strong>nº <span
+                id="preview-numero-declarante"></span></strong>,
+        <strong><span id="preview-bairro-declarante"></span></strong>, <strong><span
+                id="preview-cep-declarante"></span></strong>, <strong><span
+                id="preview-cidade-declarante"></span></strong> - <strong><span
+                id="preview-uf-declarante"></span></strong>,
+        email:____________________________________ , e telefone:____________________________________ , declaro que o
+        suposto pai de <strong><span id="preview-nome-registrado"></span></strong> é
+        <strong><span id="preview-nome-suposto-pai"></span></strong>, <strong><span
+                id="preview-profissao-suposto-pai"></span></strong>, residente e domiciliado na <strong><span
+                id="preview-rua-suposto-pai"></span></strong>,
+        <strong><span id="preview-rua-declarante"></span></strong>, <strong>nº <span
+                id="preview-numero-declarante"></span></strong>,
+        <strong><span id="preview-bairro-declarante"></span></strong>, <strong><span
+                id="preview-cep-declarante"></span></strong>,
+        <strong><span id="preview-cidade-declarante"></span></strong> - <strong><span
+                id="preview-uf-declarante"></span></strong>,
+        email:____________________________________ , telefone:____________________________________ .
+        Declaro que não tenho conhecimento de outro endereço de localização ou eletrônico do mesmo ou telefone para
+        instruir a indicação.
+        Declaro expressamente que li toda a declaração, tenho ciência da responsabilidade civil e criminal dela
+        decorrente e estando de acordo
+        com os dadosnela inseridos, responsabilizo-me por futuras contestações ou por qualquer dano causado em virtude
+        de tal indicação.
+        <br>
+        <br>
+        <span id="preview-date"></span>
+        <br><br>
+        ________________________________________
+        <br>
+        <span id="preview-sign"></span>
+
+        Manifestação colhida nos termos do artigo 7º §1º do provimento 13 do CNJ, na unidade interligada do Hospital <span id="preview-hospital"></span>,
+        localizado na <span id="endereco-hospital"></span>
+    </div>
+    <script src="../scripts/indicacao-do-pai.js"></script>
+</body>
 
 </html>
