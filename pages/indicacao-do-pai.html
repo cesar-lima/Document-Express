@@ -20,8 +20,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 <script type="text/javascript">
-    $("#idcpf").mask("000.000.000-00");
-    $("#cep").mask("00000-000");
+    $("#idcpfdeclarante").mask("000.000.000-00");
+    $("#idcpfsupostopai").mask("000.000.000-00");
+    $("#cepdeclarante").mask("00000-000");
+    $("#cepsupostopai").mask("00000-000");
 </script>
 
 <body>
@@ -39,11 +41,16 @@
             <label for="registrado(a)">Nome do(a) Registrado(a)</label>
         </div>
 
-        <div class="optionGroup">
-            <!-- 
-            colocar opções de maternidade para o usuario escolher
-                    o - sepaco      o - amparo 
-            -->
+        <div class="optionGroupContainer">
+            <div class="optionGroup">
+                <input type="checkbox" class="checkboxoption" checked>
+                <label>Amparo</label>
+            </div>
+    
+            <div class="optionGroup">
+                <input type="checkbox" class="checkboxoption">
+                <label>Sepaco</label>
+            </div>    
         </div>
 
         <h4>
@@ -120,7 +127,7 @@
         </div>
 
         <div class="inputGroup">
-            <input name="cep" type="text" required="" id="cepsupostopai" onblur="pesquisacep(this.value)" />
+            <input name="cep" type="text" required="" id="cepsupostopai" onblur="pesquisacep2(this.value)" />
             <label for="cep">CEP</label>
         </div>
 
@@ -172,13 +179,12 @@
         suposto pai de <strong><span id="preview-nome-registrado"></span></strong> é
         <strong><span id="preview-nome-suposto-pai"></span></strong>, <strong><span
                 id="preview-profissao-suposto-pai"></span></strong>, residente e domiciliado na <strong><span
-                id="preview-rua-suposto-pai"></span></strong>,
-        <strong><span id="preview-rua-declarante"></span></strong>, <strong>nº <span
-                id="preview-numero-declarante"></span></strong>,
-        <strong><span id="preview-bairro-declarante"></span></strong>, <strong><span
-                id="preview-cep-declarante"></span></strong>,
-        <strong><span id="preview-cidade-declarante"></span></strong> - <strong><span
-                id="preview-uf-declarante"></span></strong>,
+                id="preview-rua-suposto-pai"></span></strong>,<strong>nº <span
+                id="preview-numero-suposto-pai"></span></strong>,
+        <strong><span id="preview-bairro-suposto-pai"></span></strong>, <strong><span
+                id="preview-cep-suposto-pai"></span></strong>,
+        <strong><span id="preview-cidade-suposto-pai"></span></strong> - <strong><span
+                id="preview-uf-suposto-pai"></span></strong>,
         email:____________________________________ , telefone:____________________________________ .
         Declaro que não tenho conhecimento de outro endereço de localização ou eletrônico do mesmo ou telefone para
         instruir a indicação.
@@ -193,7 +199,8 @@
         ________________________________________
         <br>
         <span id="preview-sign"></span>
-
+        <br>
+        <br>
         Manifestação colhida nos termos do artigo 7º §1º do provimento 13 do CNJ, na unidade interligada do Hospital <span id="preview-hospital"></span>,
         localizado na <span id="endereco-hospital"></span>
     </div>
