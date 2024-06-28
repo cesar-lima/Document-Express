@@ -173,9 +173,9 @@ function gerarTermo() {
     document.getElementById("preview-numero-suposto-pai").textContent = numerosupostopai;
 
     if (document.getElementsByClassName("checkboxoption")[0].checked) {
-        document.getElementById("preview-hospital").textContent = "Maternidade Amparo Maternal, localizado Rua Loefgren, 1901 - Vila Clementino, São Paulo - SP, 04040-033";
+        document.getElementById("preview-hospital").textContent = "da Maternidade Amparo Maternal, localizado Rua Loefgren, 1901 - Vila Clementino, São Paulo - SP, 04040-033";
     } else {
-        document.getElementById("preview-hospital").textContent = "Hospital e Maternidade Sepaco, localizado na Rua Vergueiro, 4210 - Vila Mariana, São Paulo - SP, 04102-900";
+        document.getElementById("preview-hospital").textContent = "do Hospital e Maternidade Sepaco, localizado na Rua Vergueiro, 4210 - Vila Mariana, São Paulo - SP, 04102-900";
     }
 
 

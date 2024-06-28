@@ -122,8 +122,8 @@ function gerarTermo() {
     document.getElementById("preview-atendente").textContent = atendente
 
     document.getElementById("print-preview").style.display = "block";
-
     document.getElementById("formulario").style.display = "none"
+    document.getElementsByClassName("previous-icon-container")[0].style.display= "none"
 
     let dataAtual = new Date();
     let dia = dataAtual.getDate();
@@ -143,6 +143,7 @@ function gerarTermo() {
     window.print();
 
     document.getElementById("formulario").style.display = "flex"
+    document.getElementsByClassName("previous-icon-container")[0].style.display= "flex"
 
     nome.value = document.getElementById("preview-nome").textContent = nome;
     estcivil.value = document.getElementById("preview-estCivil").textContent = estcivil;

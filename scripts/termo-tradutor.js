@@ -98,7 +98,7 @@ function gerarTermo() {
     document.getElementById("preview-complemento").textContent = complemento;
 
     document.getElementById("print-preview").style.display = "block";
-
+    document.getElementsByClassName("previous-icon-container")[0].style.display= "none"
     document.getElementById("formulario").style.display = "none"
 
     let dataAtual = new Date();
@@ -115,7 +115,9 @@ function gerarTermo() {
     // Chame a função de impressão do navegador
     window.print();
 
+    document.getElementById("print-preview").style.display = "none";
     document.getElementById("formulario").style.display = "flex"
+    document.getElementsByClassName("previous-icon-container")[0].style.display= "flex"
 
     tradutor.value = document.getElementById("preview-nome").textContent 
     estCivil.value = document.getElementById("preview-estCivil").textContent 

@@ -19,7 +19,7 @@ function gerarTermo() {
   
     // Exiba a área de visualização
     document.getElementById("print-preview").style.display = "block";
-    
+    document.getElementsByClassName("previous-icon-container")[0].style.display= "none"
     document.getElementById("formulario").style.display = "none"
 
     let dataAtual = new Date();
@@ -37,6 +37,7 @@ function gerarTermo() {
     window.print();
 
     document.getElementById("formulario").style.display = "flex"
+    document.getElementsByClassName("previous-icon-container")[0].style.display= "flex"
 
     nome = document.getElementById("preview-nome").textContent
     rg = document.getElementById("preview-rg").textContent

@@ -134,6 +134,7 @@ function gerarTermo() {
     }
 
     document.getElementById("formulario").style.display = "none"
+    document.getElementsByClassName("previous-icon-container")[0].style.display= "none"
 
     let dataAtual = new Date();
     let dia = dataAtual.getDate();
@@ -152,6 +153,7 @@ function gerarTermo() {
     document.getElementById("formulario").style.display = "flex"
     document.getElementById("print-preview").style.display = "none";
     document.getElementById("print-preview2").style.display = "none";
+    document.getElementsByClassName("previous-icon-container")[0].style.display= "flex"
 
     if (document.getElementById("checkbox1").checked) {
         nome = document.getElementById("preview-nome2").textContent = nome;

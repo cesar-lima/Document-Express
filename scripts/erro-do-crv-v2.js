@@ -19,6 +19,7 @@ function gerarTermo() {
     document.getElementById("print-preview").style.display = "block";
 
     document.getElementById("formulario").style.display = "none"
+        document.getElementsByClassName("previous-icon-container")[0].style.display= "none"
 
     let dataAtual = new Date();
     let dia = dataAtual.getDate();
@@ -36,6 +37,7 @@ function gerarTermo() {
 
     document.getElementById("print-preview").style.display = "none";
     document.getElementById("formulario").style.display = "flex"
+        document.getElementsByClassName("previous-icon-container")[0].style.display= "flex"
 
     nome = document.getElementById("preview-nome").textContent
     rg = document.getElementById("preview-rg").textContent
