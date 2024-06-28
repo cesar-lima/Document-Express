@@ -173,9 +173,11 @@ function gerarTermo() {
     document.getElementById("preview-numero-suposto-pai").textContent = numerosupostopai;
 
     if (document.getElementsByClassName("checkboxoption")[0].checked) {
-        document.getElementById("preview-hospital").textContent = "da Maternidade Amparo Maternal, localizado Rua Loefgren, 1901 - Vila Clementino, São Paulo - SP, 04040-033";
-    } else {
-        document.getElementById("preview-hospital").textContent = "do Hospital e Maternidade Sepaco, localizado na Rua Vergueiro, 4210 - Vila Mariana, São Paulo - SP, 04102-900";
+        document.getElementById("preview-hospital").textContent = "na unidade interligada da Maternidade Amparo Maternal, localizado Rua Loefgren, 1901 - Vila Clementino, São Paulo - SP, 04040-033";
+    } else if (document.getElementsByClassName("checkboxoption")[1].checked) {
+        document.getElementById("preview-hospital").textContent = "na unidade interligada do Hospital e Maternidade Sepaco, localizado na Rua Vergueiro, 4210 - Vila Mariana, São Paulo - SP, 04102-900";
+    } else{
+        document.getElementById("preview-hospital").textContent = "no Oficial de Registro Civil das Pessoas Naturais do 21 Subdistrito-Saúde, da Comarca da Capital de São Paulo, localizado na Avenida Jabaquara, 1336 - Mirandópolis, São Paulo - SP, 04046-200";
     }
 
 
