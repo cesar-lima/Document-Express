@@ -73,3 +73,13 @@ form button:hover{
     font-size: 20px;
     margin-top: 40px;
 }
+
+.finalDocument .stamp-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.finalDocument img{
+    width: 160px;
+    margin-right: 24px;
+}
