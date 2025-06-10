@@ -20,33 +20,30 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 <script type="text/javascript">
-    $("#idcpf").mask("000.000.000-00");
-    $("#iddeclaracao").mask("00000000-0");
+    $("#iddatafalecimento").mask("00/00/0000");
 </script>
 
 <body>
-    <div class="previous-icon-container">
-        <a href="javascript:history.back()"><img src="../assets/previous-page.svg" alt="página anterior"></a>
-    </div>
-
-    <h2>
-        Ofício para 2ª via de boletim de ocorrência
-    </h2>
-
+    
     <form action="" id="formulario">
-        <div class="inputGroup">
-            <input type="text" required="" id="idnome" autocomplete="off">
-            <label for="name">Nome</label>
+        <div class="form-header">
+            <div class="previous-icon-container">
+                <a href="../index.html"><img src="../assets/previous-page.svg" alt="página anterior"></a>
+            </div>
+        
+            <h2>
+                Ofício para 2ª via de boletim de ocorrência
+            </h2>
         </div>
 
         <div class="inputGroup">
-            <input type="text" required="" id="idrg" autocomplete="off">
-            <label for="rg">RG</label>
+            <input type="text" required="" id="idnomedp" autocomplete="on">
+            <label for="nomedp">Nome do DP</label>
         </div>
 
         <div class="inputGroup">
-            <input type="text" required="" id="idcpf" autocomplete="off">
-            <label for="cpf">CPF</label>
+            <input type="text" required="" id="idnumerobo" autocomplete="off">
+            <label for="numerobo">Número do B.O</label>
         </div>
 
         <div class="inputGroup">
@@ -55,26 +52,36 @@
         </div>
 
         <div class="inputGroup">
-            <input type="text" required="" id="iddeclaracao" autocomplete="off">
-            <label for="declaracao">Nº da declaração</label>
+            <input type="text" required="" id="iddatafalecimento" autocomplete="off">
+            <label for="datafalecimento">Data de falecimento</label>
         </div>
 
         <div class="inputGroup">
-            <input type="text" required="" id="idparentesco" autocomplete="off">
-            <label for="parentesco">Grau de parentesco</label>
+            <input type="text" required="" id="idlocalfalecimento" autocomplete="off">
+            <label for="localfalecimento">Local de falecimento</label>
+        </div>
+
+        <div class="inputGroup">
+            <input type="text" required="" id="idescrevente" autocomplete="on">
+            <label for="escrevente">Escrevente</label>
         </div>
 
         <button onclick="gerarTermo()" type="button">Gerar termo</button>
     </form>
 
     <div class="finalDocument" id="print-preview" style="display: none;">
-        Eu <strong><span id="preview-nome"></span></strong>, portador(a) do RG: <strong><span
-                id="preview-rg"></span></strong>
-        e do CPF: <strong><span id="preview-cpf"></span></strong>. Declaro retirar a 1º via da certidão de óbito de
-        <strong><span id="preview-falecido"></span></strong>,
-        nº da declaração <strong><span id="preview-declaracao"></span></strong>, <b>SEM protocolo</b>, sendo
-        <strong><span id="preview-parentesco"></span></strong>,
+        Ao Sr(a). Responsável pela emissão de Boletins de ocorrência do <strong><span id="preview-nomedp"></span></strong>
+        <br><br><br><br>
+
+        Venho por meio deste ofício solicitar a emissão de 2ª via de Boletim de Ocorrência nº<strong><span id="preview-numerobo"></span></strong>
+        referente ao falecimento de <strong><span id="preview-falecido"></span>, falecido aos <span id="preview-datafalecimento"></span>
+        no(a) <span id="preview-localfalecimento"></span>.</strong> Este documento é de vital importância para evitar o lapso de informações sobre 
+        o falecido, e assim, proceder o peticionamento judicial de registro de óbito fora do prazo. Nesses termos, submete-se esse pedido 
+        esse pedido à apreciação de vossas excelências e permanecemos à disposição para o que for necessário.
         <br><br>
+    
+        Aproveito a oportunidade para renovar votos de estima e distinta consideração.
+        <br><br><br><br>
         <span id="preview-date"></span>
         <br><br>
         ________________________________________
@@ -82,7 +89,7 @@
         <span id="preview-sign"></span>
     </div>
 
-    <script src="../scripts/retirada-de-obito.js"></script>
+    <script src="../scripts/oficio-2via-bo.js"></script>
 </body>
 
 </html>
