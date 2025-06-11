@@ -76,12 +76,22 @@ form button:hover{
     text-align: justify;
     margin: 0 auto;
     color: black;
-    font-size: 20px;
+    font-size: 11pt;
     margin-top: 40px;
 }
 
 .finalDocument .finalDocument-header{
-    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    > .logo img{
+        width: 150px;
+    }
+
+    > .header-infos{
+        text-align: right;
+    }
 }
 
 .finalDocument .sign-container{
