@@ -1,14 +1,14 @@
-header{
+header {
     text-align: center;
     padding: 40px;
 }
 
-header img{
+header img {
     width: 150px;
     border-radius: 50%;
 }
 
-header div{
+header div {
     font-size: 20pt;
     font-weight: 700;
     display: flex;
@@ -18,11 +18,11 @@ header div{
     color: #c2c1ff;
 }
 
-header div div{
+header div div {
     font-weight: 300;
 }
 
-header p{
+header p {
     margin-top: 120px;
     font-size: 14pt;
     font-weight: 700;
@@ -54,12 +54,12 @@ header p{
     border: 2px solid #ffffff;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-a:visited{
+a:visited {
     color: white;
     text-decoration: none;
 }
@@ -73,8 +73,89 @@ a:visited{
     transform: scale(1.1, 1.1);
 }
 
+.last-doc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background-color: #8f8dff;
+    border: 8px solid transparent;
+    color: white;
+    gap: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.text {
+    font-size: 14pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.svg {
+    padding-top: 5px;
+    height: 100%;
+    width: fit-content;
+}
+
+.svg svg {
+    width: 40px;
+    height: 20px;
+}
+
+.button:hover {
+    border: 8px solid #c2c1ff;
+}
+
+.button:active {
+    border: 5px solid #c0dfff;
+}
+
+.button:hover .svg svg {
+    animation: jello-vertical 0.9s both;
+    transform-origin: left;
+}
+
+@keyframes jello-vertical {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    40% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    50% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+
+    65% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    75% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
 @media screen and (max-width: 990px) {
-    .cards{
+    .cards {
         flex-direction: column;
         align-items: center;
         margin-bottom: 80px;
