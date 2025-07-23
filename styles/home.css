@@ -77,7 +77,7 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin: 80px 0px 80px 0px;
 }
 
 .button {
@@ -86,12 +86,12 @@ a:visited {
     justify-content: center;
     padding: 8px 16px;
     background-color: #8f8dff;
-    border: 8px solid transparent;
     color: white;
     gap: 8px;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s;
+    border: none;
 }
 
 .text {
@@ -112,7 +112,7 @@ a:visited {
 }
 
 .button:hover {
-    border: 8px solid #c2c1ff;
+    background-color: #a5a4f8;
 }
 
 .button:active {
